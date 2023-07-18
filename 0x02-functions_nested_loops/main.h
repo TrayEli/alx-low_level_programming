@@ -1,7 +1,7 @@
 #ifndef main_h
 #define main_h
 
-int _putcher (char);
+int _putchar(char);
 void print_alphabet(void);
 void print _alphabet _x10(void);
 int _islower(int c);
