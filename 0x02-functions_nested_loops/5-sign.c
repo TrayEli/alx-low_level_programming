@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * Prototype: int print_sign(int n);
+ *Prototype: int print_sign(int n);
  *Returns 1 and prints + if n is greater than zero
  *Returns 0 and prints 0 if n is zero
  *Returns -1 and prints - if n is less than zero
@@ -14,4 +14,3 @@ int print_sign(int n)
         _putchar('+');
         return (1);
     } else if (n == 0)
-}
