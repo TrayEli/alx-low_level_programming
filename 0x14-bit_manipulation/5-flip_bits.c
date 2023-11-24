@@ -10,15 +10,18 @@
  */
 unsigned int flip_bits(unsigned long int num1, unsigned long int num2)
 {
-    unsigned int bit_count = 0;
-    unsigned long int exclusive_or_result = num1 ^ num2;
+    int index;
+    unsigned int bitCount = 0;
+    unsigned long int currentBit;
+    unsigned long int xorResult = num1 ^ num2;
 
-    // Count set bits using Brian Kernighan's algorithm
-    while (exclusive_or_result) {
-        exclusive_or_result &= (exclusive_or_result - 1);
-        bit_count++;
+    for (index = 63; index >= 0; index--)
+    {
+        currentBit = xorResult >> index;
+        if (currentBit & 1)
+            bitCount++;
     }
 
-    return bit_count;
+    return bitCount;
 }
 
