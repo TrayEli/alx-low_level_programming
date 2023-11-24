@@ -11,7 +11,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 	signed int index = 0, 
-	num = 0;
+	ConvertedNum = 0;
 
 
 	if (!b)
@@ -24,13 +24,13 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		}
 
-		num <<= 1;
+		ConvertedNum <<= 1;
 
 		if (b[index] & 1)
 		{
-			num += 1;
+			ConvertedNum += 1;
 		}
 		index += 1;
 	}
-	return (num);
+	return (ConvertedNum);
 }
